@@ -56,7 +56,6 @@ function App() {
                 canvas.width,
                 canvas.height
             );
-            context.rotate(-Math.PI/2);
         };
     }, [videoURL]);
 

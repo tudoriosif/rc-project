@@ -28,8 +28,8 @@
 
 // Replace with your network credentials
 const char* hostname = "ESP32CAM";
-const char* ssid = "DIGI-Z6hf";
-const char* password = "0744592933";
+const char* ssid = "Galaxy S20";
+const char* password = "ehev5713";
 
 WebSocketsClient webSocket;
 WebSocketsClient webSocketPIR;
@@ -137,7 +137,6 @@ void setup(){
 
   sensor_t * s = esp_camera_sensor_get();
   s->set_hmirror(s, 1);        
-  s->set_vflip(s, 1); 
   
   // SET eth on private put ip from ipconfig
   webSocket.begin(IP, 9000, "/jpgstream_server");
@@ -173,7 +172,7 @@ void loop() {
     }
 
 
-    if(now - messageTimestamp > 30) {
+    if(now - messageTimestamp > 10) {
         messageTimestamp = now;
 
         camera_fb_t * fb = NULL;
