@@ -28,8 +28,8 @@
 
 // Replace with your network credentials
 const char* hostname = "ESP32CAM";
-const char* ssid = "Galaxy S20";
-const char* password = "ehev5713";
+const char* ssid = "";
+const char* password = "";
 
 WebSocketsClient webSocket;
 WebSocketsClient webSocketPIR;
@@ -131,7 +131,7 @@ void setup(){
   // Print ESP32 Local IP Address
   Serial.println(WiFi.localIP());
 
-  String IP = "192.168.100.8";
+  String IP = "";
 
   setupCamera();
    
